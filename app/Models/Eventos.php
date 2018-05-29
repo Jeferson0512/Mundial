@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Eventos extends Model
+{
+    protected $table = 'eventos' ;
+    
+    protected $fillable = ['title_event','description_event','img_event','fecha_event'];
+    
+    protected $hidden = ['id'];
+    
+}

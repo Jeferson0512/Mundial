@@ -15,15 +15,11 @@ class NoticiasController extends Controller
 {
 
     public function index_Noticia_DESC(){
-        $noticias = Noticias::orderBy('id','DESC')->get();
+        $noticias = Noticias::noticia();
         return $noticias;
     }
     public function index_Noticia(){
-<<<<<<< HEAD
-        $noticias = Noticias::noticia();
-=======
         $noticias = Noticias::orderBy('id','DESC')->get();
->>>>>>> a4066dd86263981e8e8327d984c23bb851300268
         return $noticias;
     }
 

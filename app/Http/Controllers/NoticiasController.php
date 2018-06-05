@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\File;
 class NoticiasController extends Controller
 {
 
+    public function index_Noticia_DESC(){
+        $noticias = Noticias::orderBy('id','DESC')->get();
+        return $noticias;
+    }
     public function index_Noticia(){
-        $noticias = Noticias::orderBy('id','DESC');
+        $noticias = Noticias::noticia();
         return $noticias;
     }
 

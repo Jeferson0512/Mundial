@@ -15,7 +15,7 @@ class NoticiasController extends Controller
 {
 
     public function index_Noticia(){
-        $noticias = Noticias::orderBy('id','DESC');
+        $noticias = Noticias::orderBy('id','DESC')->get();
         return $noticias;
     }
 

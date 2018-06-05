@@ -13,4 +13,8 @@ class CategoriasController extends Controller
         $categoria = Categorias::all();
         return $categoria;
     }
+    public function show_length(){
+        $categoria = Categoria::count();
+        return $categoria;
+    }
 }

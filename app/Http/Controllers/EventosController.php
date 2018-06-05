@@ -11,7 +11,7 @@ class EventosController extends Controller
 {
 
     public function index_event(){
-        $eventos = Eventos::all()->take(4);
+        $eventos = Eventos::orderBy('id','DESC')->take(4)->get();
         return $eventos;
     }
 

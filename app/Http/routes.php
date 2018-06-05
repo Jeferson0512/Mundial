@@ -20,6 +20,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'cors'], function(){
   //  Route::get('/mirar-noticias','NoticiasController@index_Noticia_bla');    
     Route::get('mirar-evento','EventosController@index_event');
     Route::get('mirar-slider','NoticiasController@show_slider');
+    Route::get('mirar-categoria','CategoriasController@show_categorias');
     
     //Vista de paises por continente
     Route::get('/anfitrion','PaisesController@show_anfitrion');

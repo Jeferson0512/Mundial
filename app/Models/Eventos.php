@@ -11,5 +11,9 @@ class Eventos extends Model
     protected $fillable = ['title_event','description_event','img_event','fecha_event'];
     
     protected $hidden = ['id'];
+
+    public function categoria(){
+        return  $this->belongsTo('App\Models\Categorias');
+    }
     
 }

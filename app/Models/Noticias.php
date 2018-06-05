@@ -17,6 +17,9 @@ class Noticias extends Model
     public function pais(){
         return $this->belongsTo('App\Models\Pais');
     }
+    public function categoria(){
+        return $this->belongsTo('App\Models\Categorias');
+    }
     public static function noticia(){
         return DB::table('noticias')
         ->join('paises','paises.id','=','noticias.pais_id')

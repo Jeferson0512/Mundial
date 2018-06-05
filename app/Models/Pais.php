@@ -15,4 +15,7 @@ class Pais extends Model
     public function jugador(){
         return $this->hasMany('App\Models\Jugadores');
     }
+    public function noticia(){
+        return $this->hasMany('App\Models\Noticias');
+    }
 }

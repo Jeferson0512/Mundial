@@ -21,7 +21,8 @@ Route::group(['prefix' => 'api', 'middleware' => 'cors'], function(){
     Route::get('mirar-evento','EventosController@index_event');
     Route::get('mirar-slider','NoticiasController@show_slider');
     Route::get('mirar-categoria','CategoriasController@show_categorias');
-    Route::get('longitud','CategoriasController@longitud');
+    Route::get('longitud-noticia','NoticiasController@longitud_noticia');
+    Route::get('longitud-evento','EventosController@longitud_evento');
     
     //Vista de paises por continente
     Route::get('/anfitrion','PaisesController@show_anfitrion');

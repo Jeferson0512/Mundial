@@ -15,4 +15,9 @@ class EventosController extends Controller
         return $eventos;
     }
 
+    public function longitud_evento(){
+        $eventos = Eventos::count();
+        return $eventos;
+    }
+    
 }

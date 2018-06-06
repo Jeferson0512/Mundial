@@ -13,8 +13,4 @@ class CategoriasController extends Controller
         $categoria = Categorias::all();
         return $categoria;
     }
-    public function longitud(){
-        $categoria = Categorias::count();
-        return $categoria;
-    }
 }

@@ -14,7 +14,7 @@ class CategoriasController extends Controller
         return $categoria;
     }
     public function show_length(){
-        $categoria = Categoria::count();
+        $categoria = Categoria::count()->get();
         return $categoria;
     }
 }

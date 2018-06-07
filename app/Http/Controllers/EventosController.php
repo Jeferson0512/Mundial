@@ -17,6 +17,7 @@ class EventosController extends Controller
 
     public function index_all_event(){
         $eventos = Eventos::orderBy('id','DESC')->get();
+        return $eventos;
     }
 
     public function longitud_evento(){

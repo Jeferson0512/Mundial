@@ -32,6 +32,9 @@ Route::group(['prefix' => 'api', 'middleware' => 'cors'], function(){
     Route::get('/concacaf','PaisesController@show_concacaf');
     Route::get('/europa','PaisesController@show_europa');
     
+    //Community
+    Route::resource('comunidad', 'ComunidadController');
+    
     //Vista por grupos de clasificatoria
     Route::get('/grupoA','PaisesController@show_grupoA');
     Route::get('/grupoB','PaisesController@show_grupoB');

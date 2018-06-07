@@ -19,6 +19,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'cors'], function(){
     Route::get('/mirar-noticia','NoticiasController@index_Noticia');
   //  Route::get('/mirar-noticias','NoticiasController@index_Noticia_bla');    
     Route::get('mirar-evento','EventosController@index_event');
+    Route::get('mirar-all-evento','EventosController@index_all_event');
     Route::get('mirar-slider','NoticiasController@show_slider');
     Route::get('mirar-categoria','CategoriasController@show_categorias');
     Route::get('longitud-noticia','NoticiasController@longitud_noticia');

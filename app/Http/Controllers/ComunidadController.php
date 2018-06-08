@@ -29,10 +29,10 @@ class ComunidadController extends Controller
                 throw new \Exception('Se esperaba la descripción');
             }
             
-            $comunidad = new Comunidad();
-            $comunidad->comunity_user = $request->get('comunity_user');
-            $comunidad->comunity_description = $request->get('comunity_description');
-            $comunidad->comunity_date = $request->get('comunity_date');
+            $comunidad2 = new Comunidad();
+            $comunidad2->comunity_user = $request->get('comunity_user');
+            $comunidad2->comunity_description = $request->get('comunity_description');
+            $comunidad2->comunity_date = $request->get('comunity_date');
             
             if($request->hasFile('comunity_image') && $request->file('comunity_image')->isValid())
             {
@@ -41,17 +41,17 @@ class ComunidadController extends Controller
                 
                 Storage::disk('img')->put($filename,  File::get($comunity_image));
                 
-                $comunidad->comunity_image = $filename;
+                $comunidad2->comunity_image = $filename;
                 
                 $comunity_user_img = $request->file('comunity_user_img');
                 $filename = $request->file('comunity_user_img')->getClientOriginalName();
                 
                 Storage::disk('images')->put($filename,  File::get($comunity_user_img));
                 
-                $comunidad->comunity_user_img = $filename;
+                $comunidad2->comunity_user_img = $filename;
             }
             
-            $comunidad->save();
+            $comunidad2->save();
             
             return response()->json(['type' => 'success', 'message' => 'Registro completo'], 200);
             

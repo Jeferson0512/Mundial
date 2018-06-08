@@ -46,7 +46,7 @@ class ComunidadController extends Controller
                 $comunity_user_img = $request->file('comunity_user_img');
                 $filename = $request->file('comunity_user_img')->getClientOriginalName();
                 
-                Storage::disk('img')->put($filename,  File::get($comunity_user_img));
+                Storage::disk('images')->put($filename,  File::get($comunity_user_img));
                 
                 $comunidad->comunity_user_img = $filename;
             }

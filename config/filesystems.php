@@ -62,9 +62,9 @@ return [
             'bucket' => 'your-bucket',
         ],
         
-        'img' => [
+        'images' => [
             'driver' => 'local',
-            'root' => public_path() . '/img',
+            'root' => public_path() . '/images',
             'visibility' => 'public',
         ],
 

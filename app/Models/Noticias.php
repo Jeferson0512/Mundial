@@ -10,9 +10,9 @@ class Noticias extends Model
 {
     protected $table = 'noticias';
     
-    protected $fillable = ['nombre_n','info_n','imagen','created_at'];
+    protected $fillable = ['id','nombre_n','info_n','imagen','created_at'];
         
-    protected $hidden = ['pais_id','updated_at'];
+    protected $hidden = ['updated_at','pais_id'];
     
     public function pais(){
         return $this->belongsTo('App\Models\Pais');

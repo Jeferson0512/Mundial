@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\File;
 class NoticiasController extends Controller
 {
 
+    public function ver_noticia($id){
+        $noticia = Noticias::find($id);
+	    return $noticia;
+    }
     public function longitud_noticia(){
         $noticia = Noticias::count();
         return $noticia;

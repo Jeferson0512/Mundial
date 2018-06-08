@@ -26,6 +26,7 @@ class EventosController extends Controller
     }
     public function ver_evento($id){
         $evento = Eventos::find($id);
+	return $evento;
     }
     
 }
